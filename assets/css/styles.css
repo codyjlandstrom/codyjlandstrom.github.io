@@ -1,4 +1,4 @@
-/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -886,10 +886,14 @@ pre code {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+  /*mobile only*/
+  position: absolute;
+  bottom: 0; }
 
 @media (min-width: 768px) {
   .container {
+    position: relative;
     width: 750px; } }
 
 @media (min-width: 992px) {
@@ -5073,7 +5077,8 @@ html, body {
   .main_slide {
     background: none; }
   .jumbotron {
-    padding-top: 140px; }
+    padding-top: 50%;
+    transform: translateY(-50%); }
     .jumbotron h1 {
       font-size: 48px !important;
       letter-spacing: 2.5px;
@@ -5081,8 +5086,7 @@ html, body {
     .jumbotron p {
       font-size: 21px; }
   .detail {
-    max-width: 700px;
-    padding-top: 40px; }
+    max-width: 700px; }
   .icon {
     margin-bottom: 15px; }
   .kern {
@@ -5136,4 +5140,4 @@ html, body {
 .icon-mail:before {
   content: "e"; }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles.css.map 
