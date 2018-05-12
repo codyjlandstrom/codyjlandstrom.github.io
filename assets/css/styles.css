@@ -883,13 +883,14 @@ pre code {
   overflow-y: scroll; }
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
   /*mobile only*/
   position: absolute;
-  bottom: 0; }
+  top: 50%;
+  transform: translateY(-50%); }
 
 @media (min-width: 768px) {
   .container {
@@ -5076,9 +5077,7 @@ html, body {
 @media screen and (min-width: 768px) {
   .main_slide {
     background: none; }
-  .jumbotron {
-    padding-top: 50%;
-    transform: translateY(-50%); }
+  .jumbotron {}
     .jumbotron h1 {
       font-size: 48px !important;
       letter-spacing: 2.5px;
