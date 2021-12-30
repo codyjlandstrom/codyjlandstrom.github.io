@@ -5025,15 +5025,13 @@ html, body {
   letter-spacing: 2.5px;
   line-height: 1.3;
   top: 45%;
-  transform: translateY(-50%);
   position: absolute;
   text-align: center;
   width: 100%;
   padding-right: 100px;
   --c: #1dd3b01a;
   font-weight: 700;
-  color: #ffffffa0;
-  transform: skew(-15deg);}
+  color: #ffffffa0;}
 .jumbotron p {
   font-family: "freight-text-pro", Georgia;
   font-size: 15px;
