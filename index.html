@@ -29,10 +29,18 @@
 	<meta name="twitter:description" content="Cody J. Landstrom is a Technical Product Manager and Digital Consultant in New York City."/>
 	<script src="//use.typekit.net/dnv1wnm.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
+	<script>const userAgent = navigator.userAgent.toLowerCase(); 
+		const isSafari  = userAgent.indexOf("safari") != 1 && userAgent.indexOf("chrome") == -1;
+		const video     = document.getElementById("example");
+		if(isSafari){
+		  const poster = video.getAttribute("poster");
+		  const safariPoster = poster.replace("webp", "jpg");
+		  video.setAttribute("poster", safariPoster);
+		}</script>
 </head>
 <body>
 <div class="jumbotron_container">
-	<video playsinline autoplay muted loop preload="auto" poster="assets/video/clay.jpg">
+	<video playsinline autoplay muted loop preload="auto" poster="assets/video/clay.webp">
 		<source src="assets/video/clay_min_4k.webm" type="video/webm">
 		<source src="assets/video/clay_min_4k.mp4" type="video/mp4">
 		Your browser does not support the video tag.
@@ -56,7 +64,6 @@
 
   ga('create', 'UA-39175631-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 </body>
 </html>
