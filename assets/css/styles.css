@@ -883,27 +883,13 @@ pre code {
   overflow-y: scroll; }
 
 .container {
-  padding-right: 20px;
-  padding-left: 20px;
+  padding: 50px;
   margin-right: auto;
   margin-left: auto;
   /*mobile only*/
   position: absolute;
   top: 50%;
   transform: translateY(-50%); }
-
-@media (min-width: 768px) {
-  .container {
-    position: relative;
-    width: 750px; } }
-
-@media (min-width: 992px) {
-  .container {
-    width: 970px; } }
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px; } }
 
 .container-fluid {
   padding-right: 15px;
@@ -3817,32 +3803,20 @@ a.list-group-item.active > .badge, .nav-pills > .active > a > .badge {
   margin-left: 3px; }
 
 .jumbotron {
-  padding: 30px;
-  margin-bottom: 30px;
-  color: inherit;
   background-color: #eee; }
 
 .jumbotron h1, .jumbotron .h1 {
   color: inherit; }
 
 .jumbotron p {
-  margin-bottom: 15px;
   font-size: 21px;
   font-weight: 200; }
 
-.container .jumbotron {
-  border-radius: 6px; }
-
 .jumbotron .container {
-  max-width: 100%; }
+  width: 100%;
+  height: 100% }
 
 @media screen and (min-width: 768px) {
-  .jumbotron {
-    padding-top: 48px;
-    padding-bottom: 48px; }
-  .container .jumbotron {
-    padding-right: 60px;
-    padding-left: 60px; }
   .jumbotron h1, .jumbotron .h1 {
     font-size: 63px; } }
 
@@ -5047,7 +5021,19 @@ html, body {
 .jumbotron h1 {
   font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  font-size: 25px; }
+  font-size: 35px;
+  letter-spacing: 2.5px;
+  line-height: 1.3;
+  top: 45%;
+  transform: translateY(-50%);
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  padding-right: 100px;
+  --c: #1dd3b01a;
+  font-weight: 700;
+  color: #ffffffa0;
+  transform: skew(-15deg);}
 .jumbotron p {
   font-family: "freight-text-pro", Georgia;
   font-size: 15px;
@@ -5064,19 +5050,27 @@ html, body {
 .jumbotron_container {
   width: 100%;
   height: 100%;
-  background: url('../img/web_bg.jpg') no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: right -100px top; }
+  position: relative;
+  overflow: hidden; }
+
+.jumbotron_container video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0; }
 
 .main_slide {
   background-color: rgba(225, 225, 225, 0.7);
   height: 100%;
   margin-bottom: 0; }
 
+.detail {
+  position: absolute;
+  bottom: 25px; }
+
 @media screen and (min-width: 768px) {
-  .main_slide {
-    background: none; }
   .jumbotron {}
     .jumbotron h1 {
       font-size: 48px !important;
@@ -5084,8 +5078,6 @@ html, body {
       line-height: 1.3; }
     .jumbotron p {
       font-size: 21px; }
-  .detail {
-    max-width: 700px; }
   .icon {
     margin-bottom: 15px; }
   .kern {
